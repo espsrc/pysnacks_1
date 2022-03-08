@@ -1,0 +1,14 @@
+name: pysnack_1
+
+channels:
+ - defaults
+ - conda-forge
+
+dependencies:
+ - python
+ - astropy
+ - astroquery
+ - matplotlib
+ - numpy
+ - jupyterlab
+ - pandas
