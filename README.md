@@ -6,20 +6,20 @@ the use of Python packages for astrophysics/space science called ”PySnacks”.
 PySnacks 1 consist of four sessions dedicated to fundamental packages (Pandas, Astropy, Astroquery) in combination with the Gaia and Pa-STARRS datasets which will take place on 22, 25, 29 March and 1 April 2022 from 10am to 1pm (CET), 
 
 Session 1 - 22nd March 2022
-1. Basic queries
-2. Coordinate Transformations
+ - Basic queries
+ - Coordinate Transformations
 
 Session 2 - 25th March 2022 
-3. Plotting and Tabular Data
-4. Plotting and Pandas
-5. Transform and Select
+ - Plotting and Tabular Data
+ - Plotting and Pandas
+ - Transform and Select
 
 Session 3 - 29th March 2022
-6. Join
-7. Photometry
+ - Join
+ - Photometry
 
 Session 4 - 1st April 2022 
-8. Visualization
+ - Visualization
 
 The session materials are based on the Data Carpentry Astronomy Curriculum "Foundations of Astronomical Data Science *beta*" lesson (see https://datacarpentry.org/astronomy-python/), but modified to better tailor the IAA participant needs. 
 
