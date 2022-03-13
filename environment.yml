@@ -12,3 +12,4 @@ dependencies:
  - numpy
  - jupyterlab
  - pandas
+ - scikit-learn
