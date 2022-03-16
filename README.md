@@ -98,7 +98,7 @@ Download this repository and create conda environment with the dependencies
 git clone https://github.com/spsrc/pysnacks_1.git
 cd pysnacks_1
 conda env create -f environment.yml
-conda activate pysnacks_1
+conda activate pysnack_1
 ```
 
 If you want to use Jupyer Lab:
