@@ -1,4 +1,4 @@
-# Pysnacks 1  - Astronomical Data Science with Python
+# PySnacks 1  - Astronomical Data Science with Python
 
 The PySnacks 1 virtual workshop is the first event of the IAA Severo Ochoa Training Initiative `PySnacks`, which consists on a series of workshops on 
 the use of Python packages for astrophysics and space science.
@@ -43,7 +43,7 @@ This repository hosts the materials for the workshop and instructions on how to 
 # Workshop materials
 
 ## Session 1
-- [Tutorial 1: Basic queries and coordinate transformations](session_01/pysnack_1_01.ipynb)
+TBD
     
 ## Session 2
 TBD
