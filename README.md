@@ -1,9 +1,9 @@
 # Pysnacks 1  
 
-Tht PySnacks 1 virtual workshop is the first event of the IAA Severo Ochoa Training Initiative which consists on a series of workshops on 
+The PySnacks 1 virtual workshop is the first event of the IAA Severo Ochoa Training Initiative which consists on a series of workshops on 
 the use of Python packages for astrophysics/space science called ”PySnacks”. 
 
-PySnacks 1 consist of four sessions dedicated to fundamental packages (Pandas, Astropy, Astroquery) in combination with the Gaia and Pa-STARRS datasets which will take place on 22, 25, 29 March and 1 April 2022 from 10am to 1pm (CET), 
+PySnacks 1 consist of four sessions dedicated to fundamental packages (Pandas, Astropy, Astroquery, Matplotlib) in combination with the Gaia dataset which will take place on 22, 25, 29 March and 1 April 2022 from 10am to 1pm (CET), 
 
 Session 1 - 22nd March 2022
  - Basic queries
@@ -43,7 +43,12 @@ TBC
 
 # Execution of the tutorials
 
-Tutorials execution will be on a JupyterHub instance at IAA-CSIC. The virtual machines will be served by Jupyter Hub deployed on the host institution (IAA). You need to login to your dedicated machine and the Jupyter instance will be available for two weeks from the end of the workshop. Your progress will be stored and can be retrieved every time you access the service. You can use this service to experiment and work on your own files.
+Tutorials execution will be on a JupyterHub instance at IAA-CSIC. The virtual machines will be served by JupyterHub. You need to login to your dedicated machine and the Jupyter instance will be available for two weeks from the end of the workshop. Your progress will be stored and can be retrieved every time you access the service. You can use this service to experiment and work on your own files.
+
+There is also the option to use your own machine. This repository contains a conda environment to help you install all the required software.
+
+
+## Option 1. Execute notebook tutorials in the JupyterHub instance
 
 The IAA-CSIC Severo Ochoa Center provides a prototype JupyterHub instance available here:
 TBC
@@ -59,4 +64,46 @@ All virtual machines and their contents will be removed by the 18th of April, 20
 In case of problems using this JupyterHub instance please file an issue at https://github.com/spsrc/pysnacks_1/issues
 
 
+## Option 2. Execute notebook tutorials in your local machine
+
+### Install conda
+
+We recommend using `conda` to manage the dependencies. Miniconda is a light-weight version of Anaconda. First we show how to install Miniconda if you don't have it already. More details [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
+
+Miniconda for Linux:
+```bash
+curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash ./Miniconda3-latest-Linux-x86_64.sh
+rm ./Miniconda3-latest-Linux-x86_64.sh
+```
+
+Miniconda for macOS:
+```bash
+curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+bash Miniconda3-latest-MacOSX-x86_64.sh
+rm Miniconda3-latest-MacOSX-x86_64.sh
+```
+
+Note that the installation will suggest you to modify your bashrc so conda is always available, which is a good idea in general. Alternatively, if you want the Miniconda installation to be encapsulated in your working directory without affecting the rest of your system you can install it with the following option. The first command only needs to be done once, and the second one needs to be done everytime you open a new terminal. 
+
+```bash
+bash ./Miniconda3-latest-Linux-x86_64.sh -b -p my_conda_env
+source my_conda_env/etc/profile.d/conda.sh
+```
+
+### Get the contents of the workshop
+
+Download this repository and create conda environment with the dependencies
+```bash
+git clone https://github.com/spsrc/pysnacks_1.git
+cd pysnacks_1
+conda env create -f environment.yml
+conda activate pysnacks_1
+```
+
+If you want to use Jupyer Lab:
+```bash
+conda install -c conda-forge jupyterlab
+jupyter lab
+```
 
