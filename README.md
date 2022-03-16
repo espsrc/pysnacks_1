@@ -6,13 +6,14 @@ the use of Python packages for astrophysics/space science called ”PySnacks”.
 PySnacks 1 consist of four sessions dedicated to fundamental packages (Pandas, Astropy, Astroquery, Matplotlib) in combination with the Gaia dataset which will take place on 22, 25, 29 March and 1 April 2022 from 10am to 1pm (CET), 
 
 Session 1 - 22nd March 2022
- - Basic queries
- - Coordinate Transformations
+ - Astropy main ingredientes 
+ - Coordinate transformations
+ - Vizier queries 
 
 Session 2 - 25th March 2022 
- - Plotting and Tabular Data
- - Plotting and Pandas
- - Transform and Select
+ - Tables: Astropy and Pandas tables 
+ - Plotting and exploratory analysis
+ - Transformations 
 
 Session 3 - 29th March 2022
  - Join
