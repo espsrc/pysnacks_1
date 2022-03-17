@@ -1,30 +1,37 @@
-FROM ubuntu:20.04
+FROM jupyter/base-notebook:python-3.7.6
 
-# Upgrade installed packages
-RUN apt-get update && apt-get upgrade -y && apt-get clean
+USER root
 
-RUN apt-get install -y curl python3 python3-dev python3-distutils python3-pip git wget
+RUN apt-get -y update \
+ && apt-get install -y dbus-x11 \
+   firefox \
+   xfce4 \
+   xfce4-panel \
+   xfce4-session \
+   xfce4-settings \
+   xorg \
+   xubuntu-icon-theme
 
-RUN pip3 install astropy pysynphot scipy numpy>=1.17 matplotlib 
+# Remove light-locker to prevent screen lock
+RUN wget 'https://sourceforge.net/projects/turbovnc/files/2.2.5/turbovnc_2.2.5_amd64.deb/download' -O turbovnc_2.2.5_amd64.deb && \
+   apt-get install -y -q ./turbovnc_2.2.5_amd64.deb && \
+   apt-get remove -y -q light-locker && \
+   rm ./turbovnc_2.2.5_amd64.deb && \
+   ln -s /opt/TurboVNC/bin/* /usr/local/bin/
 
-RUN cd / && git clone https://github.com/astropy/SPISEA.git
-	
-# Add data to cdbs folder
-RUN mkdir /cdbs
-WORKDIR /cdbs 
-RUN wget https://archive.stsci.edu/hlsps/reference-atlases/hlsp_reference-atlases_hst_multi_everything_multi_v10_sed.tar 
-RUN wget https://archive.stsci.edu/hlsps/reference-atlases/hlsp_reference-atlases_hst_multi_star-galaxy-models_multi_v3_synphot2.tar 
-RUN tar -xvf hlsp_reference-atlases_hst_multi_everything_multi_v10_sed.tar && rm hlsp_reference-atlases_hst_multi_everything_multi_v10_sed.tar
-RUN tar -xvf hlsp_reference-atlases_hst_multi_star-galaxy-models_multi_v3_synphot2.tar && rm hlsp_reference-atlases_hst_multi_star-galaxy-models_multi_v3_synphot2.tar
+# apt-get may result in root-owned directories/files under $HOME
+RUN chown -R $NB_UID:$NB_GID $HOME
 
-# Move data folders to cdbs
-RUN mv /cdbs/grp/redcat/trds/comp /cdbs
-RUN mv /cdbs/grp/redcat/trds/mtab /cdbs
-RUN mv /cdbs/grp/redcat/trds/grid /cdbs
+ADD . /opt/install
+RUN fix-permissions /opt/install
 
-RUN mkdir /cdbs/models
-WORKDIR /cdbs/models
-RUN wget http://astro.berkeley.edu/~jlu/spisea/spisea_models.tar.gz && wget http://astro.berkeley.edu/~jlu/spisea/spisea_cdbs.tar.gz
-RUN tar -xvf spisea_cdbs.tar.gz && tar -xvf spisea_models.tar.gz
+USER $NB_USER
 
+RUN cd /opt/install && \
+    conda env update -n base --file environment.yml && \
+    mv /opt/conda/.condarc /opt/conda/.condarc.bak && \
+    wget --output-document pynsnacks_1.env.yml https://raw.githubusercontent.com/spsrc/pysnacks_1/main/environment.yml && \
+    conda env update -n base --file pynsnacks_1.env.yml && \
+    conda install --yes -c conda-forge nbgitpuller git && \
+    conda clean --all --yes
 
