@@ -1,15 +1,16 @@
 name: pysnack_1
 
 channels:
- - defaults
- - conda-forge
+  - conda-forge
+  - defaults
 
 dependencies:
- - python
- - astropy
- - astroquery
- - matplotlib
- - numpy
- - jupyterlab
- - pandas
- - scikit-learn
+  - astropy=5.0
+  - astroquery=0.4.5
+  - ipython=8.1.1
+  - jupyterlab=3.3.2
+  - matplotlib=3.5.1
+  - numpy=1.21.2
+  - pandas=1.4.1
+  - python=3.10.0
+  - scikit-learn=1.0.1
