@@ -1,5 +1,4 @@
-FROM jupyter/base-notebook:python-3.7.6
-
+FROM jupyter/base-notebook:ubuntu-20.04
 USER root
 
 RUN apt-get -y update \
@@ -28,10 +27,5 @@ RUN fix-permissions /opt/install
 USER $NB_USER
 
 RUN cd /opt/install && \
-    conda env update -n base --file environment.yml && \
-    mv /opt/conda/.condarc /opt/conda/.condarc.bak && \
-    wget --output-document pynsnacks_1.env.yml https://raw.githubusercontent.com/spsrc/pysnacks_1/main/environment.yml && \
-    conda env update -n base --file pynsnacks_1.env.yml && \
-    conda install --yes -c conda-forge nbgitpuller git && \
-    conda clean --all --yes
+    conda env update -n base --file environment.yml
 
