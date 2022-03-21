@@ -14,47 +14,40 @@ The purpose of the workshop is that you become familiar with astronomical softwa
 - Clustering analysis with Scikit-Learn. KMeans and DBSCAN methods
 - Introduction to using isochrones templates
 
-
+# Course contents and materials
 PySnacks 1 consist of four sessions that will take place on 22, 25, 29 March and 1 April, 2022 from 10am to 1pm (CET):
 
-Session 1 - 22nd March 2022
+Session 1 - 22nd March 2022  
+[Tutorial 01 notebook](./tutorials/tutorial_01/pysnack_1_01.ipynb)
+
  - Astropy Quantities, units
  - Coordinates and reference frames
  - Astroquery and accessing Vizier
  - Querying and downloading Gaia data
  
-Session 2 - 25th March 2022 
- - Tables: Astropy and Pandas tables 
+Session 2 - 25th March 2022  
+[Tutorial 02 notebook](./tutorials/tutorial_02/pysnack_1_02.ipynb)
+
+ - Tables for scientific analysis: Astropy and Pandas tables 
  - Plotting with matplotlib
  - Exploratory data analysis
 
 Session 3 - 29th March 2022
+[Tutorial 03 notebook (TBD)](./tutorials/tutorial_03/pysnack_1_03.ipynb)
+
  - Introduction to ADQL queries
  - Advance plotting
  - Manipulating coordinates. Change of reference frames.
 
-Session 4 - 1st April 2022 
+Session 4 - 1st April 2022  
+[Tutorial 04 notebook (TBD)](./tutorials/tutorial_04/pysnack_1_04.ipynb)
+
  - Clustering analysis with Scikit-Learn. KMeans and DBSCAN methods
  - Advance visualization and analysis of an HR diagram with isochrones templates.
 
-The session materials are based on the Data Carpentry Astronomy Curriculum "Foundations of Astronomical Data Science *beta*" lesson (see https://datacarpentry.org/astronomy-python/), but modified to better tailor the IAA-CSIC participant needs. 
+The session materials are inspired on the Data Carpentry Astronomy Curriculum "Foundations of Astronomical Data Science *beta*" lesson (see https://datacarpentry.org/astronomy-python/), but modified to better tailor the IAA-CSIC participant needs. 
 
 This repository hosts the materials for the workshop and instructions on how to run the tutorials. It also contains a conda environment needed to execute the python notebooks, either locally or in a cloud platform.
-
-
-# Workshop materials
-
-## Session 1
-- Tutorial 01 [notebook](./tutorials/tutorial_01/pysnack_1_01.ipynb)
-    
-## Session 2
-- Tutorial 02 [notebook](./tutorials/tutorial_02/pysnack_1_02.ipynb)
-
-## Session 3
-TBD
-
-## Session 4
-TBD
 
 
 # Execution of the tutorials
@@ -66,8 +59,8 @@ If you prefer to use your own machine, we recommend that you follow the instruct
 
 ## Option 1. Execute notebook tutorials in the JupyterHub instance
 
-The IAA-CSIC Severo Ochoa Center provides a prototype JupyterHub instance available here:
-TBC
+The IAA-CSIC Severo Ochoa Center provides a JupyterHub server available here:  
+https://spsrc-jupyter.iaa.csic.es/pysnacks/
 
 Credentials for the participants will be sent by email before the the workshop begins.
 
@@ -77,7 +70,7 @@ A lightweight desktop is also available, you can access it immediately by changi
 
 All virtual machines and their contents will be removed by the 18th of April, 2022.
 
-In case of problems using this JupyterHub instance please file an issue at https://github.com/spsrc/pysnacks_1/issues or contact the organizers by email.
+In case of problems using this JupyterHub instance please file an issue at https://github.com/spsrc/pysnacks_1/issues or contact the organizers by email or slack.
 
 
 ## Option 2. Execute notebook tutorials in your local machine
@@ -116,7 +109,7 @@ cd pysnacks_1
 conda env create -f environment.yml
 conda activate pysnack_1
 ```
-You can start Jupyter Lab with:
+You can start JupyterLab with:
 ```bash
 jupyter lab
 ```
