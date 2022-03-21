@@ -48,7 +48,7 @@ This repository hosts the materials for the workshop and instructions on how to 
 - Tutorial 01 [notebook](./tutorials/tutorial_01/pysnack_1_01.ipynb)
     
 ## Session 2
-TBD
+- Tutorial 02 [notebook](./tutorials/tutorial_02/pysnack_1_02.ipynb)
 
 ## Session 3
 TBD
