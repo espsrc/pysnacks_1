@@ -17,30 +17,26 @@ The purpose of the workshop is that you become familiar with astronomical softwa
 # Course contents and materials
 PySnacks 1 consist of four sessions that will take place on 22, 25, 29 March and 1 April, 2022 from 10am to 1pm (CET):
 
-Session 1 - 22nd March 2022  
-[Tutorial 01 notebook](./tutorials/tutorial_01/pysnack_1_01.ipynb)
+**Session 1** - 22nd March 2022 [Tutorial 01 notebook](./tutorials/tutorial_01/pysnack_1_01.ipynb)
 
  - Astropy Quantities, units
  - Coordinates and reference frames
  - Astroquery and accessing Vizier
  - Querying and downloading Gaia data
  
-Session 2 - 25th March 2022  
-[Tutorial 02 notebook](./tutorials/tutorial_02/pysnack_1_02.ipynb)
+**Session 2** - 25th March 2022 [Tutorial 02 notebook](./tutorials/tutorial_02/pysnack_1_02.ipynb)
 
  - Tables for scientific analysis: Astropy and Pandas tables 
  - Plotting with matplotlib
  - Exploratory data analysis
 
-Session 3 - 29th March 2022
-[Tutorial 03 notebook (TBD)](./tutorials/tutorial_03/pysnack_1_03.ipynb)
+**Session 3** - 29th March 2022 [Tutorial 03 notebook (TBD)](./tutorials/tutorial_03/pysnack_1_03.ipynb)
 
  - Introduction to ADQL queries
  - Advance plotting
  - Manipulating coordinates. Change of reference frames.
 
-Session 4 - 1st April 2022  
-[Tutorial 04 notebook (TBD)](./tutorials/tutorial_04/pysnack_1_04.ipynb)
+**Session 4** - 1st April 2022  [Tutorial 04 notebook (TBD)](./tutorials/tutorial_04/pysnack_1_04.ipynb)
 
  - Clustering analysis with Scikit-Learn. KMeans and DBSCAN methods
  - Advance visualization and analysis of an HR diagram with isochrones templates.
