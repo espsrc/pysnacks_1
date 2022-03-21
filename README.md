@@ -18,8 +18,10 @@ The purpose of the workshop is that you become familiar with astronomical softwa
 PySnacks 1 consist of four sessions that will take place on 22, 25, 29 March and 1 April, 2022 from 10am to 1pm (CET):
 
 Session 1 - 22nd March 2022
- - Astropy Quantities, units 
+ - Astropy Quantities, units
+ - Coordinates and reference frames
  - Astroquery and accessing Vizier
+ - Querying and downloading Gaia data
  
 Session 2 - 25th March 2022 
  - Tables: Astropy and Pandas tables 
@@ -43,10 +45,10 @@ This repository hosts the materials for the workshop and instructions on how to 
 # Workshop materials
 
 ## Session 1
-TBD
+- Tutorial 01 [notebook](./tutorials/tutorial_01/pysnack_1_01.ipynb)
     
 ## Session 2
-TBD
+- Tutorial 02 [notebook](./tutorials/tutorial_02/pysnack_1_02.ipynb)
 
 ## Session 3
 TBD
@@ -119,3 +121,9 @@ You can start Jupyter Lab with:
 jupyter lab
 ```
 
+## Option 3. Execute the tutorials on myBinder
+
+At any moment, also after the school, you can still run the tutorials in [myBinder.org](https://mybinder.org) following this link: 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/spsrc/pysnacks_1/main?urlpath=lab/tree/tutorials/index.ipynb)
+
+[myBinder.org](https://mybinder.org) is a free and open organization providing free cloud resources. Therefore, the resources may be limited and the changes you make in the notebooks or the system are not persistent. Please, always keep a local copy of any file you want to keep, because Binder will automatically eliminate the virtual machine assigned to you after some time of inactivity.
