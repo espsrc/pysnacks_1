@@ -1,7 +1,8 @@
-FROM jupyter/datascience-notebook:ubuntu-20.04
-
+FROM jupyter/minimal-notebook:latest
 
 USER root
+
+MAINTAINER mparra@iaa.es
 
 RUN apt-get -y update \
  && apt-get install -y dbus-x11 \
@@ -14,7 +15,7 @@ RUN apt-get -y update \
    xubuntu-icon-theme
 
 RUN apt-get install -y vim
-RUN apt-get install -y htop btop++
+RUN apt-get install -y htop
 
 # Remove light-locker to prevent screen lock
 RUN wget 'https://sourceforge.net/projects/turbovnc/files/2.2.5/turbovnc_2.2.5_amd64.deb/download' -O turbovnc_2.2.5_amd64.deb && \
@@ -29,12 +30,15 @@ RUN chown -R $NB_UID:$NB_GID $HOME
 ADD . /opt/install
 RUN fix-permissions /opt/install
 
+RUN echo "c.LabApp.collaborative = True" >> /etc/jupyter/jupyter_notebook_config.py
+RUN echo "c.LabApp.collaborative = True" >> /etc/jupyter/jupyter_server_config.py
+
 USER $NB_USER
 
 RUN cd /opt/install && \
     conda env update -n base --file environment.yml && \
     mv /opt/conda/.condarc /opt/conda/.condarc.bak && \
-    wget --output-document sostat2021.env.yml https://raw.githubusercontent.com/spsrc/sostat2021/main/environment.yml && \
-    conda env update -n base --file sostat2021.env.yml && \
+    wget --output-document pysnacks.env.yml https://raw.githubusercontent.com/spsrc/pysnacks_1/main/environment.yml && \
+    conda env update -n base --file pysnacks.env.yml && \
     conda install --yes -c conda-forge nbgitpuller git && \
     conda clean --all --yes
